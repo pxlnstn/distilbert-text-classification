@@ -1,0 +1,11 @@
+# Custom Ollama model for the triage crew.
+# It is plain llama3.2:3b but with a SMALL context window so the KV cache fits in
+# an 8 GB laptop GPU (the base model defaults to a 128k context that won't fit).
+#
+# Create it once with:
+#     ollama create ticket-triage-llm -f agent/Modelfile
+#
+# To use the bigger llama3.1 instead, change FROM below (needs more VRAM).
+FROM llama3.2:3b
+PARAMETER num_ctx 4096
+PARAMETER temperature 0.2

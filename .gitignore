@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Trained models (large; regenerate by running the scripts). results/ IS committed
+# so the grader can see the tables + charts without running anything.
+models/
+data/
+
+# HuggingFace / local caches
+.cache/
+
+# OS / Office temp files
+Thumbs.db
+.DS_Store
+~$*
